@@ -26,4 +26,7 @@ urlpatterns = [
     path('v1/upload',Upload),
     path('v1/dowloadAll', DownloadAll),
 
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

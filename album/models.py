@@ -14,7 +14,7 @@ class Fotos(models.Model):
 
 
     def __str__(self):
-        return self.foto
+        return str(self.numero)
 
     def filas (self):
         return ( len( Fotos.objects.all() ) )
