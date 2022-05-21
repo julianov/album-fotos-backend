@@ -51,7 +51,7 @@ def DownloadAll(request):
             array=[]
             for data in album:
                 if data.foto:
-                    foto={"numero":data.numero,"foto":base64.b64encode(data.foto.read()).decode('ascii'), "descripcion:":data.descripcion} 
+                    foto={"numero":data.numero,"foto":"data:image/png;base64,"+base64.b64encode(data.foto.read()).decode('ascii'), "descripcion:":data.descripcion} 
                     array.append(foto)
             if len(array)>0: 
                 return JsonResponse(array, safe=False)

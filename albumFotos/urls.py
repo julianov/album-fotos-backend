@@ -22,7 +22,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
     path('v1/upload',Upload),
     path('v1/dowloadAll', DownloadAll),
 
